@@ -26,7 +26,7 @@
 				alert(data);
 			  var items = [];
 
-			  $.each( data, function( project ) {
+			  $.each( data, function( key, project ) {
 			  	alert(project);
 			    items.push( "<li id='" + project + "'>" + project + "</li>" );
 			  });
