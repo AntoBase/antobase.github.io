@@ -17,3 +17,5 @@ require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
+
+![alt text](http://labs.antobase.com/Glass_Worm/screenshot.png "Title")
