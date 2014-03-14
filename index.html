@@ -8,11 +8,12 @@
 	<script src="./js/marked.js"></script>
 	<script type="text/javascript">
 		console.log(marked('I am using __markdown__.'));
-		$.get( "./glass_worm.md", function( data ) {
-		  $( "#content" ).html( marked(data) );
-		  alert( "Load was performed." );
+		$(function(){
+			$.get( "./glass_worm.md", function( data ) {
+		  		$( "#content" ).html( marked(data) );
+		  		alert( "Load was performed." );
+			});
 		});
-
 	</script>
 </head>
 
