@@ -24,7 +24,9 @@
 
 			$.getJSON( "./activated_projects.json", function( data ) {
 			  var items = [];
+
 			  $.each( data, function( project ) {
+			  	alert(project)
 			    items.push( "<li id='" + project + "'>" + project + "</li>" );
 			  });
 			 
