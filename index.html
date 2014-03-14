@@ -42,8 +42,8 @@
 			});
 
 			if(window.location.hash) {
-				console.log(window.location.hash);
-  				LoadProject(window.location.hash);
+				console.log(window.location.hash.replace("#",""));
+  				LoadProject(window.location.hash.replace("#",""));
 			} else {
   				LoadProject("");
 			}
