@@ -23,12 +23,10 @@
 		$(function(){
 
 			$.getJSON( "./activated_projects.json", function( data ) {
-				alert(data);
 			  var items = [];
 
 			  $.each( data, function( key, project ) {
-			  	alert(project);
-			    items.push( "<li id='" + project + "'>" + project + "</li>" );
+			    items.push( "<li id='"+ project +"'><a href='#'> " + project + "</a></li>" );
 			  });
 			 
 			  $( "#projectlist").html( items.join( "" ) );
