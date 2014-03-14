@@ -35,13 +35,19 @@
 				var items = [];
 
 				$.each( data, function( key, project ) {
-					items.push( "<li id='"+ project +"'><a href='#"+project+"'> " + project + "</a></li>" );
+					items.push( "<li id='"+ project +"'><a href='#"+project.replace(/ /g,"_")+"'> " + project + "</a></li>" );
 				});
 
 				$( "#projectlist").html( items.join( "" ) );
 			});
 
-			LoadProject("");
+			if(window.location.hash) {
+  				LoadProject(window.location.hash.replace("_",/ /g));
+			} else {
+  				LoadProject("");
+			}
+
+			
 		});
 	</script>
 </head>
