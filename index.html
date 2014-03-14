@@ -23,7 +23,6 @@
 			console.log($projectname);
 			$.get( "./"+$projectname+"/readme.md", function( data ) {
 				$( "#content" ).html( marked(data) );
-				$(".project-title").html($projectname);
 				$("#"+$projectname).addClass("active");
 
 
@@ -36,7 +35,7 @@
 				var items = [];
 
 				$.each( data, function( key, project ) {
-					items.push( "<li id='"+ project +"'><a href='#"+project.replace(/ /g,"_")+"'> " + project + "</a></li>" );
+					items.push( "<li id='"+ project +"'><a href='#"+project+"'> " + project.replace("_", " ") + "</a></li>" );
 				});
 
 				$( "#projectlist").html( items.join( "" ) );
@@ -44,7 +43,7 @@
 
 			if(window.location.hash) {
 				console.log(window.location.hash);
-  				LoadProject(window.location.hash.replace("_"," "));
+  				LoadProject(window.location.hash);
 			} else {
   				LoadProject("");
 			}
