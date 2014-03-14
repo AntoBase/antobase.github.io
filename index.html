@@ -24,7 +24,7 @@
 		$(function(){
 
 			$('ul#projectlist').click(function(){
-    			console.log($(this).id());
+    			console.log($(this).attr('id'));
 			});
 
 			$.getJSON( "./activated_projects.json", function( data ) {
