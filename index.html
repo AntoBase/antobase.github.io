@@ -19,15 +19,16 @@
 				$(".project-title").html($projectname);
 				$("#"+$projectname).addClass("active");
 
-				$('ul#projectlist li').click(function(){
-  					LoadProject($(this).attr('id'));
-				});
+				
 			});
 		}
 
 		$(function(){
 
-			
+			$('ul#projectlist li').on("click", function(){
+					console.log($(this).attr('id'));
+  					LoadProject($(this).attr('id'));
+				});
 
 			$.getJSON( "./activated_projects.json", function( data ) {
 				var items = [];
