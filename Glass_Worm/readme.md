@@ -18,4 +18,4 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-![alt text](http://labs.antobase.com/Glass_Worm/screenshot.png "Title")
+<img style="float: right; width:100%" src="http://labs.antobase.com/Glass_Worm/screenshot.png" />
