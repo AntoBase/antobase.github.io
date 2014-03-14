@@ -44,7 +44,7 @@
 
 			if(window.location.hash) {
 				console.log(window.location.hash);
-  				LoadProject(window.location.hash.replace("_",/ /g));
+  				LoadProject(window.location.hash.replace("_"," "));
 			} else {
   				LoadProject("");
 			}
