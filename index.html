@@ -15,8 +15,9 @@
 	<script type="text/javascript">
 
 		$(document).on("click", "ul#projectlist li", function(e) {
-        console.log(this.innerHTML);
-    });
+        	console.log($(this).attr('id'));
+  			LoadProject($(this).attr('id'));
+    	});
 
 		function LoadProject($projectname){
 			$.get( "./"+$projectname+"/readme.md", function( data ) {
@@ -29,11 +30,6 @@
 		}
 
 		$(function(){
-
-			$('ul#projectlist li').on("click", function(){
-					console.log($(this).attr('id'));
-  					LoadProject($(this).attr('id'));
-				});
 
 			$.getJSON( "./activated_projects.json", function( data ) {
 				var items = [];
