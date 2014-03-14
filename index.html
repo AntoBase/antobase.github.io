@@ -17,10 +17,15 @@
 			$.get( "./"+$projectname+"/readme.md", function( data ) {
 				$( "#content" ).html( marked(data) );
 				$(".project-title").html($projectname);
+				$("#"+projectname).addClass("active");
 			});
 		}
 
 		$(function(){
+
+			$('ul#projectlist').click(function(){
+    			console.log('This works');
+			});
 
 			$.getJSON( "./activated_projects.json", function( data ) {
 				var items = [];
