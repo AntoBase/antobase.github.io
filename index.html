@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Hello Strapdown</title>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -15,9 +14,9 @@
 	<script type="text/javascript">
 
 		$(document).on("click", "ul#projectlist li", function(e) {
-        	console.log($(this).attr('id'));
-  			LoadProject($(this).attr('id'));
-    	});
+			console.log($(this).attr('id'));
+			LoadProject($(this).attr('id'));
+		});
 
 		function LoadProject($projectname){
 			console.log($projectname);
@@ -43,9 +42,9 @@
 
 			if(window.location.hash) {
 				console.log(window.location.hash.replace("#",""));
-  				LoadProject(window.location.hash.replace("#",""));
+				LoadProject(window.location.hash.replace("#",""));
 			} else {
-  				LoadProject("");
+				LoadProject("");
 			}
 
 			
@@ -66,35 +65,19 @@
 				</button>
 				<a class="navbar-brand" href="/">AntoBase Labs</a>
 			</div>
-        <!--<div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-      </div> !-->
-  </div>
-</div>
-
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-3 col-md-2 sidebar">
-			<ul id="projectlist" class="nav nav-sidebar">
-				<li class="active"><a href="#">Overview</a></li>
-				<li><a href="#">Reports</a></li>
-				<li><a href="#">Analytics</a></li>
-				<li><a href="#">Export</a></li>
-			</ul>
-		</div>
-
-		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-			<div id="content">test</div>
 		</div>
 	</div>
-</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul id="projectlist" class="nav nav-sidebar"></ul>
+			</div>
+
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div id="content"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
