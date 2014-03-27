@@ -7,6 +7,11 @@ body {
   padding-top: 50px;
 }
 
+/* The AntoBase Colors */
+.navbar-inverse {
+  background-color: #006db5;
+  border-color: #00568d;
+}
 
 /*
  * Global add-ons
