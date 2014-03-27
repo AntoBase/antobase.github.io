@@ -1,4 +1,5 @@
 # Glass Worm
+*by Batist in 2006 from the black notebook with the read corners*
 
 ## Ultimate Goal
 
@@ -11,5 +12,5 @@ To provide large deserts with pipelines at extreemly low cost. These pipelines c
 
 ## Sketches 
  
- <img style="float: right; width:100%" src="http://labs.antobase.com/Glass_Worm/glassworm.jpg" />
+ <img style="width:70%" src="http://labs.antobase.com/Glass_Worm/glassworm.jpg" />
 
