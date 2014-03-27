@@ -12,6 +12,9 @@ body {
   background-color: #006db5;
   border-color: #00568d;
 }
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
 
 /*
  * Global add-ons
