@@ -1,21 +1,15 @@
-# Markdown text goes in here
+# Glass Worm
 
-## Chapter 1
+## Ultimate Goal
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. 
+To provide large deserts with pipelines at extreemly low cost. These pipelines could transport water (possibly seawater) far into the dessert.
 
-## Chapter 2
+## How it works
+* It uses sand as base material.
+* It melts the sand and fuses it together into tubes.
+* It uses solare energy. (perhaps fresnell lenses)
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+## Sketches 
+ 
+ <img style="float: right; width:100%" src="http://labs.antobase.com/Glass_Worm/glassworm.jpg" />
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-<img style="float: right; width:100%" src="http://labs.antobase.com/Glass_Worm/screenshot.png" />
