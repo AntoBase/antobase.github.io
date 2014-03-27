@@ -3,7 +3,7 @@
 
 ## Ultimate Goal
 
-To provide large deserts with pipelines at extreemly low cost. These pipelines could transport water (possibly seawater) far into the dessert.
+To provide large deserts with pipelines at extremely low cost. These pipelines could transport water (possibly seawater) far into the dessert.
 
 ## How it works
 * It uses sand as base material.
