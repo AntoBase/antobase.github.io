@@ -64,7 +64,7 @@
 				$.each( data, function( key, value ) {
 					if(/http:\/\/(www\.)?labs\.antobase\.com/i.test(value.commit.message)){
 						$( "#history").append( marked("#### " + value.commit.message) );
-						$( "#history").append( marked("*[by " + value.commit.committer.name + " on " + value.commit.committer.date +"]("+ value.commit.html_url+")*"));
+						$( "#history").append( marked("*[by " + value.commit.committer.name + " on " + value.commit.committer.date +"]("+ value.html_url+")*"));
 					}
 				});
 			} );
