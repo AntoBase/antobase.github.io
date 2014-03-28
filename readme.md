@@ -4,9 +4,14 @@ This website contains some raw ideas, sketches and prototypes. They used to be s
 
 
 If you want to contact me about anything you can:
+
 * email me: batist.leman@gmail.com
 * fork this website on GitHub: https://github.com/AntoBase/antobase.github.io
 * submit an issue on something: https://github.com/AntoBase/antobase.github.io/issues
  
 Have fun and chillax,  
 Batist
+
+
+# Recent commits
+<div id="history"></div>

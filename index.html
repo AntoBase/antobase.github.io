@@ -20,27 +20,36 @@
 		});
 
 		function LoadProject($projectname){
-			marked.setOptions({ gfm: true });
-			console.log($projectname);
-			$.get( "./"+$projectname+"/readme.md", function( data ) {
-				$( "#content" ).html( marked(data) );
-				$("#"+$projectname).addClass("active");
+			try{
+				marked.setOptions({ gfm: true });
+				console.log($projectname);
+				$.get( "./"+$projectname+"/readme.md", function( data ) {
+					$( "#content" ).html( marked(data) );
+					$("#"+$projectname).addClass("active");
 
 
-			});
+				});
+			}catch(err){
+				console.log(err);
+			}
+
 		}
 
 		$(function(){
 
-			$.getJSON( "./activated_projects.json", function( data ) {
-				var items = [];
+			try{
+				$.getJSON( "./activated_projects.json", function( data ) {
+					var items = [];
 
-				$.each( data, function( key, project ) {
-					items.push( "<li id='"+ project +"'><a href='#"+project+"'> " + project.replace("_", " ") + "</a></li>" );
+					$.each( data, function( key, project ) {
+						items.push( "<li id='"+ project +"'><a href='#"+project+"'> " + project.replace("_", " ") + "</a></li>" );
+					});
+
+					$( "#projectlist").html( items.join( "" ) );
 				});
-
-				$( "#projectlist").html( items.join( "" ) );
-			});
+			}catch(err){
+				console.log(err);
+			}
 
 			if(window.location.hash) {
 				console.log(window.location.hash.replace("#",""));
@@ -48,6 +57,17 @@
 			} else {
 				LoadProject("");
 			}
+
+			$.getJSON("https://api.github.com/repos/AntoBase/antobase.github.io/commits", function(data){
+				console.log("Grabbed the commits");
+				console.log(data);
+				$.each( data, function( key, value ) {
+					if(/http:\/\/(www\.)?labs\.antobase\.com/i.test(value.commit.message)){
+						$( "#history").append( marked("#### " + value.commit.message) );
+						$( "#history").append( marked("*[by " + value.commit.committer.name + " on " + value.commit.committer.date +"]("+ value.commit.html_url+")*"));
+					}
+				});
+			} );
 
 			
 		});
@@ -77,8 +97,11 @@
 			</div>
 
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-				<div id="content"></div>
+				<div id="content"><div id="history">test</div></div>
 			</div>
+
+			
+
 		</div>
 	</div>
 
