@@ -28,11 +28,6 @@
 
 	<script type="text/javascript">
 
-		$(document).on("click", "ul#projectlist li", function(e) {
-			console.log($(this).attr('id'));
-			LoadProject($(this).attr('id'));
-		});
-
 		function LoadProject($projectname){
 			try{
 				marked.setOptions({ gfm: true });
@@ -44,6 +39,7 @@
 
 					if($projectname === "")
 						$projectname = "home";
+
 					DISQUS.reset({
 					  reload: true,
 					  config: function () {  
@@ -62,9 +58,16 @@
 
 		$(function(){
 
+			console.log("DOM loaded");
+
 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        	$(document).on("click", "ul#projectlist li", function(e) {
+				console.log("Clicked "+$(this).attr('id'));
+				LoadProject($(this).attr('id'));
+			});
 
 			try{
 				$.getJSON( "./activated_projects.json", function( data ) {
