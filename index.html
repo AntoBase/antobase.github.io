@@ -30,7 +30,7 @@
 
 					DISQUS.reset({
 					  reload: true,
-					  config: function () {  
+					  config: function ($projectname) {  
 					    this.page.identifier = $projectname;  
 					    this.page.url = "http://labs.antobase.com/#!"+$projectname;
 					  }
