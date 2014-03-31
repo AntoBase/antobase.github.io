@@ -47,7 +47,7 @@
 						if($projectname === "")
 							$projectname = "home";
 
-						if(DISQUS != null){
+						if(typeof DISQUS !== 'undefined'){
 							DISQUS.reset({
 							  	reload: true,
 							  	config: function () {  
