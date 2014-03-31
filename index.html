@@ -42,6 +42,8 @@
 
 					$("#"+$projectname).addClass("active");
 
+					if($projectname === "")
+						$projectname = "home";
 					DISQUS.reset({
 					  reload: true,
 					  config: function () {  
